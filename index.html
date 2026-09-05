@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Discover Japan — Endless Exploration</title>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="jap.css">
+</head>
+
+<body>
+
+<header class="main-header">
+    <div class="site-brand">こんにちは、東京</div>
+
+    <nav class="desktop-nav">
+        <a href="#home">Home</a>
+        <a href="#experiences">Experiences</a>
+        <a href="#contact">Contact</a>
+        <a href="index1.html" class="cta-link">Plan a Trip</a>
+    </nav>
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero-canvas" id="home">
+
+    <div class="hero-slider">
+
+        <!-- IMAGE SLIDE 1 -->
+        <div
+            class="slide active"
+            style="
+                background-image:
+                linear-gradient(
+                    rgba(7, 7, 94, 0.3),
+                    rgba(189, 3, 53, 0.9)
+                ),
+                url('ih.jpg');
+            "
+        ></div>
+
+
+        <!-- IMAGE SLIDE 2 -->
+        <div
+            class="slide"
+            style="
+                background-image:
+                linear-gradient(
+                    rgba(10,10,12,0.3),
+                    rgba(88,10,119,0.9)
+                ),
+                url('hhy.jpg');
+            "
+        ></div>
+
+
+        <!-- VIDEO SLIDE -->
+        <div class="slide video-slide">
+
+            <video
+                class="hero-video"
+                muted
+                playsinline
+                preload="auto"
+            >
+                <source src="jkg.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+
+            <div class="video-overlay"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- HERO TEXT -->
+
+    <div class="hero-editorial-title">
+
+        <span class="jp-character">東京</span>
+
+        <h1>TOKYO.</h1>
+
+        <p class="subtitle">
+            Where ancient stone pathways meet neon-soaked horizons.
+        </p>
+
+        <a href="#experiences" class="hero-button">
+            Explore Japan
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+
+    <!-- SLIDER CONTROLS -->
+
+    <div class="slider-controls">
+
+        <button
+            class="slider-arrow"
+            id="prevSlide"
+            aria-label="Previous slide"
+        >
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+
+        <div class="slide-indicators">
+            <button class="indicator active" data-slide="0"></button>
+            <button class="indicator" data-slide="1"></button>
+            <button class="indicator" data-slide="2"></button>
+        </div>
+
+        <button
+            class="slider-arrow"
+            id="nextSlide"
+            aria-label="Next slide"
+        >
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- ================= EXPERIENCES ================= -->
+
+<main class="content-wrapper" id="experiences">
+
+    <div class="section-meta">
+
+        <span class="section-label">JAPAN / 2026</span>
+
+        <h2>Curated Journeys</h2>
+
+        <p>
+            Filter itineraries tailored to distinct Japanese
+            regional highlights.
+        </p>
+
+    </div>
+
+
+    <!-- FILTER BUTTONS -->
+
+    <div class="filter-bar">
+
+        <button
+            class="filter-btn active"
+            data-category="all"
+        >
+            All Paths
+        </button>
+
+        <button
+            class="filter-btn"
+            data-category="tradition"
+        >
+            Ancient Tradition
+        </button>
+
+        <button
+            class="filter-btn"
+            data-category="neon"
+        >
+            Metropolis Neon
+        </button>
+
+        <button
+            class="filter-btn"
+            data-category="nature"
+        >
+            Natural Alpine
+        </button>
+
+    </div>
+
+
+    <!-- DESTINATION CARDS -->
+
+    <div
+        class="destination-grid"
+        id="destinationGrid"
+    ></div>
+
+</main>
+
+
+<!-- ================= VIDEO MODAL ================= -->
+
+<div
+    id="videoModal"
+    class="video-modal hidden"
+>
+
+    <div class="modal-content">
+
+        <button
+            id="closeModal"
+            class="close-modal-btn"
+            aria-label="Close video"
+        >
+            &times;
+        </button>
+
+        <div class="video-container">
+
+            <video
+                id="modalVideoPlayer"
+                controls
+                autoplay
+                muted
+                playsinline
+            >
+                <source src="jkg.mp4" type="video/mp4">
+            </video>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="main-footer" id="contact">
+
+    <div class="footer-grid">
+
+
+        <!-- BRAND -->
+
+        <div class="footer-col brand-col">
+
+            <div class="footer-brand">
+                日本 / Explore
+            </div>
+
+            <p class="footer-desc">
+                Curating immersive travel itineraries,
+                design inspiration, and hidden pathways
+                across Japan's most breathtaking regions.
+            </p>
+
+            <div class="footer-socials">
+
+                <a href="#" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" aria-label="Twitter">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a href="#" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- DISCOVER -->
+
+        <div class="footer-col">
+
+            <h3>Discover Paths</h3>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="#experiences">
+                        All Journeys
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#experiences">
+                        Ancient Tradition
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#experiences">
+                        Metropolis Neon
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#experiences">
+                        Natural Alpine
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- PLANNING -->
+
+        <div class="footer-col">
+
+            <h3>Planning</h3>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="#itinerary">
+                        Trip Planner
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Regional Guides
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Seasonal Tips
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Safety & FAQs
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- NEWSLETTER -->
+
+        <div class="footer-col newsletter-col">
+
+            <h3>Newsletter</h3>
+
+            <p>
+                Subscribe to receive curated itineraries
+                and hidden spot updates.
+            </p>
+
+            <form
+                class="footer-newsletter-form"
+                id="newsletterForm"
+            >
+
+                <input
+                    type="email"
+                    id="emailInput"
+                    placeholder="Your email address"
+                    required
+                >
+
+                <button
+                    type="submit"
+                    aria-label="Subscribe"
+                >
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="footer-bottom">
+
+        <p>
+            &copy; 2026 Explore Japan Agency.
+            All rights reserved.
+        </p>
+
+        <div class="footer-bottom-links">
+
+            <a href="#">
+                Privacy Policy
+            </a>
+
+            <a href="#">
+                Terms of Service
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="jap.js"></script>
+
+</body>
+</html>

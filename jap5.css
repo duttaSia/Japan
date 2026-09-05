@@ -1,0 +1,1245 @@
+/* =========================================================
+   JAPAN TRAVEL WEBSITE
+   MODERN CSS — HOKKAIDO / OSAKA / JAPAN
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        "Inter",
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background: #f7f7f5;
+    color: #171717;
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+    z-index: 1000;
+
+    transition: 0.3s ease;
+}
+
+.main-header.scrolled {
+    height: 68px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.site-brand {
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+
+    color: #111;
+
+    transition: 0.3s ease;
+}
+
+.site-brand:hover {
+    color: #d51f3d;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.desktop-nav a {
+    position: relative;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    color: #333;
+
+    transition: 0.3s ease;
+}
+
+.desktop-nav a:not(.cta-link)::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background: #d51f3d;
+
+    transition: width 0.3s ease;
+}
+
+.desktop-nav a:hover::after {
+    width: 100%;
+}
+
+.desktop-nav a:hover {
+    color: #d51f3d;
+}
+
+
+/* BACK BUTTON */
+
+.desktop-nav .back-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #555;
+}
+
+
+/* CTA */
+
+.cta-link {
+    padding: 11px 20px;
+
+    background: #151515;
+    color: white !important;
+
+    border-radius: 50px;
+
+    transition: 0.3s ease;
+}
+
+.cta-link:hover {
+    background: #d51f3d;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.tokyo-hero {
+    position: relative;
+
+    min-height: 92vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 120px 7% 80px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.82),
+            rgba(0, 0, 0, 0.42),
+            rgba(0, 0, 0, 0.15)
+        ),
+        url("pou.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+
+    overflow: hidden;
+}
+
+
+/* HERO OVERLAY */
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 75% 35%,
+            rgba(214, 31, 61, 0.25),
+            transparent 35%
+        );
+}
+
+
+/* HERO CONTENT */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 750px;
+}
+
+.hero-label {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    font-size: 0.75rem;
+    font-weight: 800;
+
+    letter-spacing: 0.2em;
+
+    color: rgba(255,255,255,0.75);
+}
+
+.hero-content h1 {
+    font-size: clamp(4rem, 10vw, 8.5rem);
+
+    line-height: 0.9;
+
+    letter-spacing: -0.06em;
+
+    font-weight: 900;
+
+    margin-bottom: 28px;
+}
+
+.hero-content p {
+    max-width: 600px;
+
+    font-size: 1.2rem;
+
+    color: rgba(255,255,255,0.86);
+
+    margin-bottom: 35px;
+}
+
+
+/* HERO BUTTON */
+
+.hero-button {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 12px;
+
+    padding: 15px 25px;
+
+    background: white;
+    color: #111;
+
+    border-radius: 50px;
+
+    font-weight: 700;
+
+    transition: 0.35s ease;
+}
+
+.hero-button:hover {
+    background: #d51f3d;
+    color: white;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.25);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro-section {
+    max-width: 950px;
+
+    margin: auto;
+
+    padding: 110px 25px 90px;
+
+    text-align: center;
+}
+
+.section-label {
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    font-size: 0.72rem;
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+
+    color: #d51f3d;
+}
+
+.intro-section h2 {
+    font-size: clamp(2.3rem, 5vw, 4.2rem);
+
+    line-height: 1.05;
+
+    letter-spacing: -0.04em;
+
+    margin-bottom: 25px;
+}
+
+.intro-section p {
+    max-width: 780px;
+
+    margin: auto;
+
+    color: #666;
+
+    font-size: 1.08rem;
+}
+
+
+/* =========================================================
+   CONTENT SECTION
+========================================================= */
+
+.content-section {
+    padding: 100px 7%;
+}
+
+.section-heading {
+    max-width: 720px;
+
+    margin-bottom: 50px;
+}
+
+.section-heading h2 {
+    font-size: clamp(2.3rem, 5vw, 4rem);
+
+    line-height: 1;
+
+    letter-spacing: -0.045em;
+
+    margin-bottom: 18px;
+}
+
+.section-heading p {
+    color: #707070;
+
+    font-size: 1rem;
+}
+
+
+/* =========================================================
+   TRAVEL CARDS
+========================================================= */
+
+.card-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 24px;
+}
+
+
+/* CARD */
+
+.travel-card {
+    position: relative;
+
+    background: white;
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    border: 1px solid #e7e7e7;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.05);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.travel-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,0.12);
+}
+
+
+/* IMAGE */
+
+.travel-card img {
+    height: 280px;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.6s ease;
+}
+
+.travel-card:hover img {
+    transform: scale(1.07);
+}
+
+
+/* IMAGE GRADIENT */
+
+.travel-card::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    top: 0;
+
+    height: 280px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 55%,
+            rgba(0,0,0,0.25)
+        );
+
+    pointer-events: none;
+}
+
+
+/* CARD CONTENT */
+
+.card-content {
+    position: relative;
+
+    padding: 25px;
+
+    background: white;
+
+    z-index: 2;
+}
+
+.card-content > span {
+    display: block;
+
+    margin-bottom: 9px;
+
+    font-size: 0.68rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
+
+    color: #d51f3d;
+}
+
+.card-content h3 {
+    font-size: 1.45rem;
+
+    margin-bottom: 12px;
+
+    letter-spacing: -0.02em;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+
+    color: #707070;
+
+    min-height: 70px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   EXPLORE BUTTON
+========================================================= */
+
+.explore-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 11px 18px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: #111;
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.explore-btn:hover {
+    background: #d51f3d;
+
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   DARK SECTION
+========================================================= */
+
+.dark-section {
+    background: #111;
+
+    color: white;
+}
+
+.dark-section .section-heading p {
+    color: #aaa;
+}
+
+
+/* =========================================================
+   ACTIVITIES
+========================================================= */
+
+.activity-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+.activity-card {
+    padding: 40px 32px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #1d1d1d,
+            #111
+        );
+
+    border: 1px solid #2d2d2d;
+
+    border-radius: 24px;
+
+    transition: 0.35s ease;
+}
+
+.activity-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #d51f3d;
+
+    box-shadow:
+        0 25px 50px rgba(0,0,0,0.3);
+}
+
+.activity-card > i {
+    display: inline-flex;
+
+    width: 55px;
+    height: 55px;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    border-radius: 15px;
+
+    background: rgba(213,31,61,0.12);
+
+    color: #ff4965;
+
+    font-size: 1.4rem;
+}
+
+.activity-card h3 {
+    font-size: 1.35rem;
+
+    margin-bottom: 12px;
+}
+
+.activity-card p {
+    color: #aaa;
+
+    font-size: 0.92rem;
+
+    margin-bottom: 25px;
+}
+
+
+/* ACTIVITY BUTTON */
+
+.activity-btn {
+    padding: 10px 17px;
+
+    border: 1px solid #444;
+
+    border-radius: 50px;
+
+    background: transparent;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.activity-btn:hover {
+    background: white;
+    color: #111;
+
+    border-color: white;
+}
+
+
+/* =========================================================
+   HOTEL SECTION
+========================================================= */
+
+.hotel-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 30px;
+}
+
+.hotel-card {
+    display: grid;
+
+    grid-template-columns: 45% 55%;
+
+    overflow: hidden;
+
+    background: white;
+
+    border-radius: 24px;
+
+    border: 1px solid #e5e5e5;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,0.06);
+
+    transition: 0.35s ease;
+}
+
+.hotel-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 25px 55px rgba(0,0,0,0.12);
+}
+
+.hotel-card img {
+    height: 100%;
+
+    min-height: 280px;
+
+    object-fit: cover;
+
+    transition: 0.5s ease;
+}
+
+.hotel-card:hover img {
+    transform: scale(1.04);
+}
+
+.hotel-content {
+    padding: 30px;
+}
+
+.hotel-content > span {
+    font-size: 0.68rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
+
+    color: #d51f3d;
+}
+
+.hotel-content h3 {
+    margin: 10px 0 12px;
+
+    font-size: 1.45rem;
+}
+
+.hotel-content p {
+    color: #707070;
+
+    font-size: 0.9rem;
+
+    margin-bottom: 22px;
+}
+
+
+/* HOTEL BUTTON */
+
+.hotel-btn {
+    padding: 11px 20px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: #111;
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.hotel-btn:hover {
+    background: #d51f3d;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   PLAN SECTION
+========================================================= */
+
+.plan-section {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    margin: 60px 7%;
+
+    padding: 65px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #181818,
+            #292929
+        );
+
+    color: white;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+.plan-section::after {
+    content: "日本";
+
+    position: absolute;
+
+    right: 40px;
+    bottom: -50px;
+
+    font-size: 12rem;
+
+    font-weight: 900;
+
+    color: rgba(255,255,255,0.025);
+
+    pointer-events: none;
+}
+
+.plan-section h2 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+
+    line-height: 1;
+
+    margin: 12px 0 16px;
+
+    letter-spacing: -0.04em;
+}
+
+.plan-section p {
+    color: #aaa;
+}
+
+
+/* PLAN BUTTON */
+
+.plan-button {
+    position: relative;
+    z-index: 2;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    white-space: nowrap;
+
+    padding: 15px 25px;
+
+    border-radius: 50px;
+
+    background: white;
+    color: #111;
+
+    font-weight: 800;
+
+    transition: 0.35s ease;
+}
+
+.plan-button:hover {
+    background: #d51f3d;
+    color: white;
+
+    transform: translateY(-4px);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.main-footer {
+    margin-top: 100px;
+
+    padding: 80px 7% 25px;
+
+    background: #0c0c0c;
+
+    color: white;
+}
+
+
+/* FOOTER GRID */
+
+.footer-grid {
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr 1fr;
+
+    gap: 60px;
+
+    padding-bottom: 65px;
+}
+
+
+/* BRAND */
+
+.footer-brand {
+    font-size: 1.35rem;
+
+    font-weight: 800;
+
+    margin-bottom: 15px;
+}
+
+.footer-brand-column > p {
+    color: #aaa;
+
+    margin-bottom: 10px;
+}
+
+.footer-description {
+    max-width: 350px;
+
+    font-size: 0.9rem;
+
+    line-height: 1.7;
+}
+
+
+/* SOCIAL */
+
+.social-icons {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+.social-icons a {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #333;
+
+    border-radius: 50%;
+
+    color: #aaa;
+
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: #d51f3d;
+
+    color: white;
+
+    border-color: #d51f3d;
+
+    transform: translateY(-3px);
+}
+
+
+/* FOOTER COLUMNS */
+
+.footer-column h3 {
+    font-size: 1rem;
+
+    margin-bottom: 20px;
+}
+
+.footer-column a {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #999;
+
+    font-size: 0.88rem;
+
+    transition: 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: white;
+
+    transform: translateX(4px);
+}
+
+.footer-column p {
+    color: #999;
+
+    font-size: 0.88rem;
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.footer-bottom {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #292929;
+
+    color: #777;
+
+    font-size: 0.78rem;
+}
+
+.footer-bottom > div {
+    display: flex;
+
+    gap: 25px;
+}
+
+.footer-bottom a {
+    transition: 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: white;
+}
+
+
+/* =========================================================
+   BUTTON FOCUS
+========================================================= */
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #d51f3d;
+
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .card-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .hotel-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns:
+            2fr 1fr 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+    /* HEADER */
+
+    .main-header {
+        height: 68px;
+
+        padding: 0 5%;
+    }
+
+    .desktop-nav {
+        gap: 12px;
+    }
+
+    .desktop-nav a:not(.back-link):not(.cta-link) {
+        display: none;
+    }
+
+    .site-brand {
+        font-size: 1rem;
+    }
+
+    .cta-link {
+        padding: 9px 15px;
+
+        font-size: 0.75rem;
+    }
+
+
+    /* HERO */
+
+    .tokyo-hero {
+        min-height: 82vh;
+
+        padding:
+            110px 7%
+            70px;
+    }
+
+    .hero-content h1 {
+        font-size: 4rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+
+    /* INTRO */
+
+    .intro-section {
+        padding:
+            75px 7%;
+    }
+
+
+    /* CONTENT */
+
+    .content-section {
+        padding:
+            70px 5%;
+    }
+
+
+    /* CARDS */
+
+    .card-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .travel-card img {
+        height: 250px;
+    }
+
+
+    /* ACTIVITIES */
+
+    .activity-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* HOTELS */
+
+    .hotel-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hotel-card {
+        grid-template-columns: 1fr;
+    }
+
+    .hotel-card img {
+        min-height: 230px;
+
+        height: 230px;
+    }
+
+
+    /* PLAN */
+
+    .plan-section {
+        margin:
+            30px 5%;
+
+        padding: 40px 25px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .plan-section::after {
+        font-size: 8rem;
+
+        right: 10px;
+    }
+
+
+    /* FOOTER */
+
+    .main-footer {
+        padding:
+            65px 6% 25px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .footer-bottom > div {
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .desktop-nav .back-link {
+        display: none;
+    }
+
+    .hero-content h1 {
+        font-size: 3.3rem;
+    }
+
+    .section-heading h2 {
+        font-size: 2.4rem;
+    }
+
+    .card-content {
+        padding: 22px;
+    }
+
+    .activity-card {
+        padding: 30px 25px;
+    }
+
+}

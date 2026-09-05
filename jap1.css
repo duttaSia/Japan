@@ -1,0 +1,1018 @@
+/* ==================================================
+   HELLO TOKYO — BOOKING PAGE
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f5f2ed;
+
+    color: #111;
+
+    overflow-x: hidden;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.booking-header {
+    height: 88px;
+
+    padding: 0 6.5vw;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: #111;
+
+    color: white;
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+/* COMPANY LOGO */
+
+.company-logo {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.logo-japanese {
+    font-size: 22px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.logo-english {
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    color: #d8a0ad;
+}
+
+
+.company-tagline {
+    font-size: 12px;
+
+    color: #999;
+
+    letter-spacing: 1px;
+}
+
+
+.back-button {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+
+.back-button:hover {
+    color: #e3a0b2;
+}
+
+
+/* ==================================================
+   MAIN
+================================================== */
+
+.booking-page {
+    padding: 70px 6.5vw 100px;
+
+    min-height: 850px;
+}
+
+
+.booking-container {
+    max-width: 1180px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+
+/* ==================================================
+   DESTINATION
+================================================== */
+
+.destination-preview {
+    position: relative;
+
+    min-height: 650px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    color: white;
+
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,0.12);
+}
+
+
+.destination-preview img {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 1s ease;
+}
+
+
+.destination-preview:hover img {
+    transform: scale(1.04);
+}
+
+
+.preview-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            0deg,
+            rgba(0,0,0,0.9),
+            rgba(0,0,0,0.05) 70%
+        );
+}
+
+
+.preview-content {
+    position: absolute;
+
+    left: 42px;
+
+    right: 42px;
+
+    bottom: 40px;
+}
+
+
+.destination-category {
+    display: block;
+
+    margin-bottom: 14px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+
+.preview-content h1 {
+    font-size:
+        clamp(55px, 7vw, 95px);
+
+    line-height: 0.95;
+
+    margin-bottom: 20px;
+
+    letter-spacing: -3px;
+}
+
+
+.preview-content p {
+    max-width: 500px;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    color:
+        rgba(255,255,255,0.85);
+}
+
+
+.destination-location {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 22px;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+}
+
+
+/* ==================================================
+   BOOKING CARD
+================================================== */
+
+.booking-form-area {
+    background: white;
+
+    padding: 45px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,0.08);
+}
+
+
+.booking-label {
+    display: block;
+
+    color: #a71946;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 12px;
+}
+
+
+.booking-form-area h2 {
+    font-size: 45px;
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 15px;
+}
+
+
+.form-intro {
+    color: #777;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+
+/* ==================================================
+   FORM
+================================================== */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+.form-group label span {
+    font-weight: 400;
+
+    color: #999;
+}
+
+
+/* INPUT */
+
+.input-wrapper {
+    position: relative;
+}
+
+
+.input-wrapper i {
+    position: absolute;
+
+    left: 15px;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    color: #999;
+}
+
+
+.input-wrapper input {
+    padding-left: 43px;
+}
+
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    border: 1px solid #ddd;
+
+    border-radius: 5px;
+
+    background: white;
+
+    outline: none;
+
+    font-size: 14px;
+
+    color: #111;
+
+    transition:
+        border-color 0.25s,
+        box-shadow 0.25s;
+}
+
+
+input,
+select {
+    height: 56px;
+
+    padding: 0 15px;
+}
+
+
+textarea {
+    padding: 15px;
+
+    resize: vertical;
+
+    min-height: 90px;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #a71946;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(167,25,70,0.08);
+}
+
+
+/* ==================================================
+   PHONE
+================================================== */
+
+.phone-row {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1.25fr;
+
+    gap: 10px;
+}
+
+
+.country-box select {
+    cursor: pointer;
+}
+
+
+.phone-input {
+    position: relative;
+}
+
+
+.phone-input i {
+    position: absolute;
+
+    left: 15px;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    color: #999;
+}
+
+
+.phone-input input {
+    padding-left: 43px;
+}
+
+
+.phone-help {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #999;
+
+    font-size: 11px;
+}
+
+
+/* ==================================================
+   FORM ROW
+================================================== */
+
+.form-row {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 15px;
+}
+
+
+/* ==================================================
+   TERMS
+================================================== */
+
+.terms-check {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin: 10px 0 20px;
+
+    color: #777;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    cursor: pointer;
+}
+
+
+.terms-check input {
+    width: 16px;
+
+    height: 16px;
+
+    margin-top: 1px;
+
+    accent-color: #a71946;
+
+    cursor: pointer;
+}
+
+
+/* ==================================================
+   SUBMIT
+================================================== */
+
+.submit-button {
+    width: 100%;
+
+    height: 56px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 13px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #111;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s,
+        transform 0.3s;
+}
+
+
+.submit-button:hover {
+    background: #a71946;
+
+    transform: translateY(-2px);
+}
+
+
+.submit-button i {
+    transition: transform 0.3s;
+}
+
+
+.submit-button:hover i {
+    transform: translateX(5px);
+}
+
+
+/* ==================================================
+   SUCCESS
+================================================== */
+
+.success-message {
+    display: none;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    margin-top: 20px;
+
+    padding: 18px;
+
+    border-radius: 6px;
+
+    background: #edf8f1;
+
+    border: 1px solid #ccebd8;
+
+    color: #176b3a;
+}
+
+
+.success-message.show {
+    display: flex;
+}
+
+
+.success-icon {
+    width: 35px;
+
+    height: 35px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #1c8c4d;
+
+    color: white;
+}
+
+
+.success-message strong {
+    font-size: 14px;
+}
+
+
+.success-message p {
+    margin-top: 5px;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.main-footer {
+    background: #111;
+
+    color: white;
+
+    padding:
+        75px 6.5vw 25px;
+}
+
+
+.footer-grid {
+    max-width: 1180px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        1fr
+        1fr
+        1.2fr;
+
+    gap: 55px;
+
+    padding-bottom: 60px;
+}
+
+
+/* FOOTER BRAND */
+
+.footer-logo {
+    display: inline-flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    margin-bottom: 18px;
+}
+
+
+.footer-logo span {
+    font-size: 22px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.footer-logo small {
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color: #d8a0ad;
+}
+
+
+.footer-brand-column p {
+    max-width: 300px;
+
+    color: #999;
+
+    line-height: 1.7;
+
+    font-size: 14px;
+}
+
+
+/* FOOTER HEADINGS */
+
+.footer-column h3 {
+    margin-bottom: 20px;
+
+    font-size: 13px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+}
+
+
+/* FOOTER LINKS */
+
+.footer-column > a:not(.footer-logo) {
+    display: block;
+
+    margin-bottom: 13px;
+
+    color: #999;
+
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+
+.footer-column > a:hover {
+    color: white;
+
+    transform: translateX(4px);
+}
+
+
+/* SOCIAL */
+
+.footer-socials {
+    display: flex;
+
+    gap: 9px;
+
+    margin-top: 24px;
+}
+
+
+.footer-socials a {
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid #444;
+
+    border-radius: 50%;
+
+    color: #aaa;
+
+    transition: 0.3s ease;
+}
+
+
+.footer-socials a:hover {
+    background: white;
+
+    color: #111;
+
+    border-color: white;
+}
+
+
+/* CONTACT */
+
+.contact-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin-bottom: 17px;
+
+    color: #999;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+.contact-item i {
+    width: 16px;
+
+    margin-top: 2px;
+
+    color: #d8a0ad;
+}
+
+
+/* ==================================================
+   FOOTER BOTTOM
+================================================== */
+
+.footer-bottom {
+    max-width: 1180px;
+
+    margin: auto;
+
+    padding-top: 25px;
+
+    border-top:
+        1px solid #333;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    color: #666;
+
+    font-size: 11px;
+}
+
+
+.footer-bottom div {
+    display: flex;
+
+    gap: 25px;
+}
+
+
+.footer-bottom a:hover {
+    color: white;
+}
+
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media (max-width: 1000px) {
+
+    .booking-container {
+        grid-template-columns: 1fr;
+
+        max-width: 700px;
+    }
+
+
+    .destination-preview {
+        min-height: 550px;
+    }
+
+
+    .footer-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .booking-header {
+        height: 75px;
+
+        padding:
+            0 5vw;
+    }
+
+
+    .company-tagline {
+        display: none;
+    }
+
+
+    .logo-japanese {
+        font-size: 17px;
+    }
+
+
+    .back-button {
+        font-size: 12px;
+    }
+
+
+    .booking-page {
+        padding:
+            35px 5vw 70px;
+    }
+
+
+    .destination-preview {
+        min-height: 470px;
+    }
+
+
+    .preview-content {
+        left: 25px;
+
+        right: 25px;
+
+        bottom: 28px;
+    }
+
+
+    .preview-content h1 {
+        font-size: 60px;
+    }
+
+
+    .booking-form-area {
+        padding: 30px 22px;
+    }
+
+
+    .booking-form-area h2 {
+        font-size: 36px;
+    }
+
+
+    .phone-row {
+        grid-template-columns: 1fr;
+    }
+
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .footer-bottom div {
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .back-button {
+        font-size: 0;
+    }
+
+
+    .back-button i {
+        font-size: 16px;
+    }
+
+
+    .destination-preview {
+        min-height: 420px;
+    }
+
+
+    .preview-content h1 {
+        font-size: 52px;
+    }
+
+
+    .booking-form-area {
+        padding: 25px 18px;
+    }
+
+}

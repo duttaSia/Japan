@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tokyo — Explore Japan</title>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Tokyo CSS -->
+    <link rel="stylesheet" href="jap3.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="main-header">
+
+    <a href="index.html" class="site-brand">
+        こんにちは、東京
+    </a>
+
+    <nav class="desktop-nav">
+
+        <a href="index.html" class="back-link">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Journeys
+        </a>
+
+        <a href="#spots">Spots</a>
+        <a href="#activities">Activities</a>
+        <a href="#hotels">Hotels</a>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="tokyo-hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <span class="hero-label">
+            JAPAN / METROPOLIS NEON
+        </span>
+
+        <h1>TOKYO</h1>
+
+        <p>
+            Experience a city where futuristic architecture,
+            neon nights and centuries-old culture come together.
+        </p>
+
+        <a href="#spots" class="hero-button">
+            Explore Tokyo
+            <i class="fa-solid fa-arrow-down"></i>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= INTRO ================= -->
+
+<section class="intro-section">
+
+    <span class="section-label">TOKYO / 2026</span>
+
+    <h2>
+        A City of Endless Discovery
+    </h2>
+
+    <p>
+        From peaceful temples and traditional neighbourhoods to
+        dazzling skyscrapers and energetic nightlife, Tokyo offers
+        a different experience around every corner.
+    </p>
+
+</section>
+
+
+<!-- ================= SPOTS ================= -->
+
+<section class="content-section" id="spots">
+
+    <div class="section-heading">
+
+        <span class="section-label">
+            DISCOVER
+        </span>
+
+        <h2>Tokyo Travel Spots</h2>
+
+        <p>
+            Explore some of Tokyo's most memorable places.
+        </p>
+
+    </div>
+
+
+    <div class="card-grid">
+
+        <!-- SHIBUYA -->
+
+        <article class="travel-card">
+
+            <img
+                src="ooj.jpg"
+                alt="Shibuya Tokyo"
+            >
+
+            <div class="card-content">
+
+                <span>METROPOLIS</span>
+
+                <h3>Shibuya Crossing</h3>
+
+                <p>
+                    Experience one of the world's most famous
+                    pedestrian crossings surrounded by Tokyo's
+                    vibrant city lights.
+                </p>
+
+                <button
+                    class="explore-btn"
+                    data-place="Shibuya Crossing"
+                >
+                    Explore
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- SENSOJI -->
+
+        <article class="travel-card">
+
+            <img
+                src="hh.jpg"
+                alt="Sensoji Temple Tokyo"
+            >
+
+            <div class="card-content">
+
+                <span>TRADITION</span>
+
+                <h3>Senso-ji Temple</h3>
+
+                <p>
+                    Discover Tokyo's historic Buddhist temple
+                    and the colourful streets of Asakusa.
+                </p>
+
+                <button
+                    class="explore-btn"
+                    data-place="Senso-ji Temple"
+                >
+                    Explore
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- TOKYO TOWER -->
+
+        <article class="travel-card">
+
+            <img
+                src="uju.jpg"
+                alt="Tokyo Tower"
+            >
+
+            <div class="card-content">
+
+                <span>LANDMARK</span>
+
+                <h3>Tokyo Tower</h3>
+
+                <p>
+                    Enjoy spectacular views across Tokyo from
+                    one of Japan's most recognisable landmarks.
+                </p>
+
+                <button
+                    class="explore-btn"
+                    data-place="Tokyo Tower"
+                >
+                    Explore
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ACTIVITIES ================= -->
+
+<section class="content-section dark-section" id="activities">
+
+    <div class="section-heading">
+
+        <span class="section-label">
+            EXPERIENCE
+        </span>
+
+        <h2>Things To Do in Tokyo</h2>
+
+        <p>
+            Add unforgettable experiences to your Tokyo journey.
+        </p>
+
+    </div>
+
+
+    <div class="activity-grid">
+
+        <div class="activity-card">
+
+            <i class="fa-solid fa-utensils"></i>
+
+            <h3>Japanese Food Tour</h3>
+
+            <p>
+                Explore sushi bars, ramen shops and traditional
+                Japanese cuisine.
+            </p>
+
+            <button
+                class="activity-btn"
+                data-activity="Japanese Food Tour"
+            >
+                View Activity
+            </button>
+
+        </div>
+
+
+        <div class="activity-card">
+
+            <i class="fa-solid fa-city"></i>
+
+            <h3>Tokyo City Tour</h3>
+
+            <p>
+                Discover Tokyo's iconic neighbourhoods and
+                spectacular city views.
+            </p>
+
+            <button
+                class="activity-btn"
+                data-activity="Tokyo City Tour"
+            >
+                View Activity
+            </button>
+
+        </div>
+
+
+        <div class="activity-card">
+
+            <i class="fa-solid fa-camera"></i>
+
+            <h3>Photography Walk</h3>
+
+            <p>
+                Capture Tokyo's neon streets, temples and
+                hidden neighbourhoods.
+            </p>
+
+            <button
+                class="activity-btn"
+                data-activity="Photography Walk"
+            >
+                View Activity
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= HOTELS ================= -->
+
+<section class="content-section" id="hotels">
+
+    <div class="section-heading">
+
+        <span class="section-label">
+            STAY
+        </span>
+
+        <h2>Where to Stay</h2>
+
+        <p>
+            Choose a comfortable base for your Tokyo adventure.
+        </p>
+
+    </div>
+
+
+    <div class="hotel-grid">
+
+        <article class="hotel-card">
+
+            <img
+                src="jj.jpg"
+                alt="Tokyo hotel"
+            >
+
+            <div class="hotel-content">
+
+                <span>SHIBUYA</span>
+
+                <h3>Tokyo City Hotel</h3>
+
+                <p>
+                    Modern rooms with easy access to shopping,
+                    restaurants and public transport.
+                </p>
+
+                <button
+                    class="hotel-btn"
+                    data-hotel="Tokyo City Hotel"
+                >
+                    View Hotel
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article class="hotel-card">
+
+            <img
+                src="ugf.jpg"
+                alt="Luxury hotel in Tokyo"
+            >
+
+            <div class="hotel-content">
+
+                <span>SHINJUKU</span>
+
+                <h3>Tokyo Grand Hotel</h3>
+
+                <p>
+                    A stylish city stay close to Tokyo's
+                    entertainment district.
+                </p>
+
+                <button
+                    class="hotel-btn"
+                    data-hotel="Tokyo Grand Hotel"
+                >
+                    View Hotel
+                </button>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PLAN TRIP ================= -->
+
+<section class="plan-section">
+
+    <div>
+
+        <span class="section-label">
+            PLAN YOUR JOURNEY
+        </span>
+
+        <h2>Ready to Explore Tokyo?</h2>
+
+        <p>
+            Create your Tokyo itinerary and start planning
+            your Japanese adventure.
+        </p>
+
+    </div>
+
+    <a href="index1.html" class="plan-button">
+        Plan Your Trip
+        <i class="fa-solid fa-arrow-right"></i>
+    </a>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="main-footer">
+
+    <div class="footer-grid">
+
+        <div class="footer-brand-column">
+
+            <div class="footer-brand">
+                こんにちは、東京
+            </div>
+
+            <p>
+                日本 / Explore
+            </p>
+
+            <p class="footer-description">
+                Curating unforgettable travel experiences,
+                hidden pathways and inspiring journeys across Japan.
+            </p>
+
+            <div class="social-icons">
+
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Tokyo</h3>
+
+            <a href="#spots">Travel Spots</a>
+            <a href="#activities">Activities</a>
+            <a href="#hotels">Hotels</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Planning</h3>
+
+            <a href="index1.html">Trip Planner</a>
+            <a href="#">Travel Guide</a>
+            <a href="#">Safety & FAQs</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Contact</h3>
+
+            <a href="mailto:hello@example.com">
+                Email Us
+            </a>
+
+            <a href="tel:+81312345678">
+                +81 3 1234 5678
+            </a>
+
+            <p>
+                Tokyo, Japan
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 こんにちは、東京 — Explore Japan.
+            All rights reserved.
+        </p>
+
+        <div>
+
+            <a href="#">Privacy Policy</a>
+
+            <a href="#">Terms of Service</a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- JavaScript -->
+
+<script src="jap3.js"></script>
+
+</body>
+</html>
